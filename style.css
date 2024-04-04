@@ -1,0 +1,50 @@
+img {
+    width: 50vw;
+    object-fit: contain;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F6F7F8;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+.form-container {
+    background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+button {
+    color: white;
+    background-color: #596D48;
+}
+
+a {
+    color: #596D48;
+}
+
+.form-row input[type='password']:invalid {
+    border: 1px solid #D55C5F;
+    color: #D55C5F;
+    box-shadow: none;
+    /* Remove default red glow in Firefox */
+}
