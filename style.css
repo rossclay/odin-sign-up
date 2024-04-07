@@ -49,6 +49,7 @@ h1 {
 
 .form-container {
     background-color: white;
+    box-shadow: 5px 5px 5px rgb(185, 185, 185);
 }
 
 form {
@@ -91,6 +92,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: end;
 }
 
 button {
@@ -119,15 +121,22 @@ input {
 }
 
 
-.form-row input[type='password']:invalid,
-.form-row input[type='text']:invalid,
-.form-row input[type='email']:invalid {
+input[type='password']:invalid,
+input[type='text']:invalid,
+input[type='email']:invalid {
     border: 1px solid #D55C5F;
-    color: #D55C5F;
     box-shadow: none;
     /* Remove default red glow in Firefox */
 }
 
-.form-row input:focus {
-    border: 1px solid #5c90d5
+input:focus,
+input:invalid:focus {
+    outline: none;
+    border: 1px solid #4f89d4;
+}
+
+input[type='password']:valid,
+input[type='text']:valid,
+input[type='email']:valid {
+    border: 1px solid green;
 }
