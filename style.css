@@ -1,4 +1,9 @@
-img {
+@font-face {
+    font-family: 'Odin';
+    src: url('./fonts/Norse-Bold.otf') format('opentype')
+}
+
+.background-img {
     max-height: 100vh;
     object-fit: contain;
 }
@@ -12,44 +17,58 @@ body {
     font-size: 18px;
 }
 
-.right-section {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 2;
-}
-
 .left-section {
     display: flex;
     flex-grow: 1;
     flex-shrink: 3;
+    width: fit-content;
+}
+
+.ribbon-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    background: black;
+    opacity: 0.6;
+    font-family: Norse;
+    font-size: 60px;
+    top: 20%;
+    width: 100%;
+}
+
+.odin-logo {
+    max-width: 10vw;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    gap: 2vh;
+    flex-shrink: 1;
+    flex-wrap: wrap;
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    padding-bottom: 50px;
-}
 
-.form-header {
-    display: flex;
-    align-items: flex-start;
 }
 
 .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 5px rgb(185, 185, 185);
 }
 
 h1 {
     font-size: 26px;
-}
-
-.form-container {
-    background-color: white;
-    box-shadow: 5px 5px 5px rgb(185, 185, 185);
 }
 
 form {
@@ -66,8 +85,9 @@ form {
 }
 
 h1,
-form {
-    width: clamp(45ch, 50%, 75ch)
+form,
+.create-or-login {
+    width: clamp(45ch, 50%, 75ch);
 }
 
 .form-row {
@@ -81,18 +101,18 @@ form {
 .form-item {
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
+    margin-right: 2vw;
 }
 
 .form-row {
-    margin-bottom: 25px;
+    margin-bottom: 2vh;
 }
 
 .create-or-login {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    gap: 3vh;
 }
 
 button {
@@ -105,10 +125,13 @@ button {
     padding-right: 48px;
     padding-bottom: 12px;
     padding-top: 12px;
+    font-size: 1.1rem;
+    max-width: fit-content;
 }
 
 a {
     color: #596D48;
+    text-decoration: none;
 }
 
 input {
